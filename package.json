@@ -1,9 +1,9 @@
 {
-  "name": "gatsby_5",
+  "name": "gatsbyrockfestival",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby_5",
-  "author": "armeniocardoso",
+  "description": "gatsbyrockfestival",
+  "author": "vitorggr",
   "keywords": [
     "gatsby"
   ],
@@ -15,8 +15,23 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mdx-js/react": "^2.3.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
     "gatsby": "^5.13.7",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-plugin-page-creator": "^5.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "materialize-css": "^1.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.53.1",
+    "react-paginate": "^8.2.0",
+    "react-parallax": "^3.5.1"
   }
 }
