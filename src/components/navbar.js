@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import M from 'materialize-css';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import "./materialize.css";
@@ -9,8 +8,16 @@ import "./materialize.css";
 export default function Navbar() {
 
   useEffect(() => {
-    const sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(sidenav);
+    if (typeof window !== 'undefined') {
+      import('materialize-css')
+        .then((M) => {
+          const sidenav = document.querySelectorAll('.sidenav');
+          M.Sidenav.init(sidenav); 
+        })
+        .catch((err) => {
+          console.error('Erro ao carregar o Materialize:', err);
+        });
+    }
   }, []);
 
   const data = useStaticQuery(graphql`
