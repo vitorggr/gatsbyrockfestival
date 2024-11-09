@@ -147,7 +147,15 @@ export default function InscricaoPage() {
         setIntegrantes(updatedIntegrantes);
     };
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     const onSubmit = (data) => {
+        debugger;
+
         if (integrantes.length === 0) {
             setMembrosError('É necessário adicionar pelo menos um integrante.');
             return;
@@ -157,10 +165,24 @@ export default function InscricaoPage() {
             setMembrosError('É necessário definir pelo menos um líder na banda.');
             return;
         }
+        
+        data.integrantes = JSON.stringify(integrantes);
 
-        handleCleanForm();
-        setMessage('Inscrição enviada com sucesso');
-        setOpen(true);
+        const formData = {
+            "form-name": "form_inscricao", 
+            ...data 
+        };
+    
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode(formData)
+        }).then(() => {
+            handleCleanForm();
+            setMessage('Inscrição enviada com sucesso');
+            setOpen(true);
+        }).catch(error => alert(error));
+
     };
 
     const handleCleanForm = () => {
@@ -181,7 +203,8 @@ export default function InscricaoPage() {
             <ThemeProvider theme={theme}>
                 <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
                     <Typography variant="h4" gutterBottom>Inscrição</Typography>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form name="form_inscricao" data-netlify="true" method="post" onSubmit={handleSubmit(onSubmit)}>
+                        <input type="hidden" name="form-name" value="form_inscricao" />
                         <Snackbar
                             anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
                             open={open}
@@ -250,7 +273,7 @@ export default function InscricaoPage() {
                         </Box>
                     </form>
                 </Container>
-                <Footer/>
+                <Footer />
             </ThemeProvider>
         </Layout>
     );

@@ -53,7 +53,7 @@ export default function BandasPage() {
             <Box className="container" sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '88vh', 
+                minHeight: '85vh', 
             }}>
                 <Box className="main">
                     <Box className="section" id="section">

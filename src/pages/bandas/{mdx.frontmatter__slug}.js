@@ -16,7 +16,7 @@ export default function BandaPost({ data, children }) {
 
     return (
         <Layout breadcrumbs={breadcrumbs}>
-            <Box className="container" sx={{ mt: 4, mb: 4, display: 'flex', justifyContent: 'center', minHeight: '78vh' }}>
+            <Box className="container" sx={{ mt: 4, mb: 4, display: 'flex', justifyContent: 'center', minHeight: '80vh' }}>
                 <Box sx={{ maxWidth: 800, width: '100%', textAlign: 'center' }}>
                     <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
                         {data.mdx.frontmatter.title}
