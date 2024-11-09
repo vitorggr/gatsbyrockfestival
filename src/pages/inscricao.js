@@ -154,7 +154,6 @@ export default function InscricaoPage() {
     }
 
     const onSubmit = (data) => {
-        debugger;
 
         if (integrantes.length === 0) {
             setMembrosError('É necessário adicionar pelo menos um integrante.');
