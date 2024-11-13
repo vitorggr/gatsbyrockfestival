@@ -1,49 +1,49 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://gatsbyrockfestival.netlify.app/">
+    <img alt="Gatsby Rock Festival" src="src/images/logo.PNG" width="100" />
   </a>
 </p>
+
 <h1 align="center">
-  Gatsby Minimal Starter
+  Gatsby Rock Festival App
 </h1>
 
-## 🚀 Quick start
+<p align="center">
+   Web app de simulação para divulgação e inscrição em um festival de música.
+</p>
 
-1.  **Create a Gatsby site.**
+---
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## 🔨 Objetivos
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- Aplicar conceitos de arquitetura de front-end com **Gatsby**.
+- Implementar um projeto **React** com separação de responsabilidades por componentes.
+- Estilizar de maneira **responsiva** para garantir usabilidade em diferentes dispositivos.
+- Criar **rotas dinâmicas** geradas a partir de arquivos de marcação (MDX).
+- Configurar uma pipeline **CI/CD** para automatizar o processo de build e deploy da aplicação.
+- Utilizar **Gatsby Image** para carregamento otimizado de imagens, garantindo uma melhor performance do site.
 
-2.  **Start developing.**
+---
 
-    Navigate into your new site’s directory and start it up.
+## 🚀 Guia Rápido
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Siga os passos abaixo para executar o projeto localmente:
 
-3.  **Open the code and start customizing!**
+1. **Clone o repositório:**
 
-    Your site is now running at http://localhost:8000!
+   ```shell
+   git clone https://github.com/vitorggr/gatsbyrockfestival.git
+   ```
+2. **Instale as dependências:**
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+   ```shell
+   npm install
+   ```
+3. **Inicie o servidor de desenvolvimento:**
 
-4.  **Learn more**
+   ```shell
+   gatsby develop
+   ```
+4. **Acesse o aplicativo no navegador:**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+  A aplicação estará rodando localmente na porta indicada.
